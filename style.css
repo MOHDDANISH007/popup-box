@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    background: rgba(222, 205, 172, 1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup {
+    width: 485px;
+    height: 243.2px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the popup is positioned relative for the close button */
+}
+
+.button {
+    width: 287px;
+    height: 61px;
+    border-radius: 32px;
+    background: rgba(235, 191, 83, 1);
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 28px;
+    cursor: pointer; 
+}
+
+.txt {
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    position: absolute; /* Positioning absolute within the popup */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8); /* Start scaled down */
+    transition: all 0.5s ease; /* Smooth transition */
+    border-radius: 20px;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+
+    display: flex; /* Show the element */
+    transform: scale(1); /* Scale up to normal size */
+    transition: all 0.5s ease;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 43px;
+    position: absolute;
+    top: -44px;
+    right: 13px;
+}
+
+.img {
+    background-image: url(Group\ 1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 152px;
+    height: 155px;
+    position: absolute;
+    top: -22px;
+    left: 4px;
+}
+
+.text {
+    position: absolute;
+    left: 180px;
+    top: 29px;
+}
+
+.input-tag {
+    position: absolute;
+    top: 170px;
+    left: 71px;
+    /* background-color: red; */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.input-tag input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 127%;
+}
+
+
+.input-tag button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(235, 191, 83, 1);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    left: 249px;
+}
+
+
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    
+    .input-tag {
+        position: absolute;
+        top: 170px;
+        left: 30px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
